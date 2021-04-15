@@ -407,6 +407,11 @@ typedef struct RTSPState {
      */
     char *user_agent;
 
+    /**
+     * Custom headers for PLAY command, will be reset after being sent once
+     */
+    char pending_play_header[1024];
+
     char default_lang[4];
     int buffer_size;
 } RTSPState;
